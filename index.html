@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Generate strong and secure passwords with our free online password generator. Customize password options and copy passwords to the clipboard easily."
+    />
+    <meta
+      name="keywords"
+      content="password generator, secure passwords, online password generator, strong passwords"
+    />
+    <meta name="author" content="Muhammad Faeez" />
+    <meta name="twitter:site" content="@mfaeezshabbir" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Password Generator" />
+    <meta
+      property="og:description"
+      content="Generate strong and secure passwords with our free online password generator. Customize password options and copy passwords to the clipboard easily."
+    />
+    <!-- <meta property="og:image" content="https://example.com/your-image.jpg" /> -->
+    <!-- <meta property="og:url" content="https://example.com/password-generator" /> -->
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Password Generator" />
+    <meta
+      name="twitter:description"
+      content="Generate strong and secure passwords with our free online password generator. Customize password options and copy passwords to the clipboard easily."
+    />
+    <!-- <meta name="twitter:image" content="https://example.com/your-image.jpg" /> -->
+    <meta name="twitter:site" content="@mfaeezshabbir" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+    <!-- Other Meta Tags (optional) -->
+    <meta name="robots" content="index, follow" />
+    <!-- To allow search engine indexing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- For responsive design -->
+    <meta name="theme-color" content="#000000" />
+    <!-- For Chrome for Android -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- For Chrome for Android -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="options">
+        <h2>Password Options</h2>
+        <form id="passwordForm">
+          <div class="form-group psl">
+            <label for="passwordLength">Password Length:</label>
+            <input type="number" id="passwordLength" value="12" />
+          </div>
+          <div class="form-group">
+            <label>Include Numbers:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="includeNumbers" checked />
+              <label for="includeNumbers"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Include Lowercase Characters:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="includeLowercase" checked />
+              <label for="includeLowercase"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Include Uppercase Characters:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="includeUppercase" checked />
+              <label for="includeUppercase"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Begin With a Letter:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="beginWithLetter" checked />
+              <label for="beginWithLetter"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Include Symbols:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="includeSymbols" checked />
+              <label for="includeSymbols"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>No Similar Characters:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="noSimilar" />
+              <label for="noSimilar"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>No Duplicate Characters:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="noDuplicate" />
+              <label for="noDuplicate"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>No Sequential Characters:</label>
+            <div class="toggle-button">
+              <input type="checkbox" id="noSequential" />
+              <label for="noSequential"></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" value="1" max="12" />
+          </div>
+          <div class="form-group">
+            <button type="button" id="generatePassword">
+              Generate Password
+            </button>
+            <!-- <button type="button" id="savePreferences">Save Preferences</button> -->
+          </div>
+        </form>
+      </div>
+      <div class="passwords">
+        <h2>Generated Passwords</h2>
+        <div id="passwords"></div>
+      </div>
+    </div>
+    <!-- Developer Credits-->
+    <div class="credits">
+      <p>
+        Developed by
+        <a href="https://github.com/mfaeezshabbir" target="_blank"
+          >Muhammad Faeez Shabbir</a
+        >
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

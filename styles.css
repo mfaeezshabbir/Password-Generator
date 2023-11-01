@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  gap: 20px;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.options,
+.passwords {
+  width: 50%;
+}
+
+.options {
+  float: left;
+}
+
+.passwords {
+  float: right;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group label {
+  margin-right: 10px;
+}
+
+.toggle-button input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-button label {
+  display: block;
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.toggle-button label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-button label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.toggle-button input[type="checkbox"]:checked + label::before {
+  background-color: #007bff;
+}
+
+.toggle-button input[type="checkbox"]:checked + label::after {
+  transform: translateX(20px);
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0069d9;
+}
+
+#passwords {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.password-entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.developer{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px 0 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
